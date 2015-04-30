@@ -1,0 +1,1 @@
+"./Protocol/Physical/PhyBridge/A110x2500PhyBridge.obj" "./Protocol/Physical/Module/A110LR09/A110LR09.obj" "./Protocol/Physical/Driver/CC1101.obj" "./Protocol/DataLink/MAC/Frame.obj" "./Protocol/DataLink/MAC/PhyAddress.obj" "./Protocol/API/API.obj" "./Application/Platform/BPEXP430G2x53.obj" "./Application/Gateway/SimplexTransfer.obj" "../lnk_msp430g2553.cmd" -l"libc.a" 

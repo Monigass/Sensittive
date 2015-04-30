@@ -1,0 +1,695 @@
+******************************************************************************
+                  MSP430 Linker PC v4.4.3                      
+******************************************************************************
+>> Linked Tue Mar 17 16:12:39 2015
+
+OUTPUT FILE NAME:   <HalfDuplexTransfer.out>
+ENTRY POINT SYMBOL: "_c_int00_noargs_noexit"  address: 0000cd14
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  SFR                   00000000   00000010  00000000  00000010  RWIX
+  PERIPHERALS_8BIT      00000010   000000f0  00000000  000000f0  RWIX
+  PERIPHERALS_16BIT     00000100   00000100  00000000  00000100  RWIX
+  RAM                   00000200   00000200  000000a5  0000015b  RWIX
+  INFOD                 00001000   00000040  00000000  00000040  RWIX
+  INFOC                 00001040   00000040  00000000  00000040  RWIX
+  INFOB                 00001080   00000040  00000000  00000040  RWIX
+  INFOA                 000010c0   00000040  00000000  00000040  RWIX
+  FLASH                 0000c000   00003fe0  00000f42  0000309e  RWIX
+  INT00                 0000ffe0   00000002  00000002  00000000  RWIX
+  INT01                 0000ffe2   00000002  00000000  00000002  RWIX
+  INT02                 0000ffe4   00000002  00000002  00000000  RWIX
+  INT03                 0000ffe6   00000002  00000002  00000000  RWIX
+  INT04                 0000ffe8   00000002  00000000  00000002  RWIX
+  INT05                 0000ffea   00000002  00000002  00000000  RWIX
+  INT06                 0000ffec   00000002  00000002  00000000  RWIX
+  INT07                 0000ffee   00000002  00000002  00000000  RWIX
+  INT08                 0000fff0   00000002  00000002  00000000  RWIX
+  INT09                 0000fff2   00000002  00000002  00000000  RWIX
+  INT10                 0000fff4   00000002  00000002  00000000  RWIX
+  INT11                 0000fff6   00000002  00000002  00000000  RWIX
+  INT12                 0000fff8   00000002  00000002  00000000  RWIX
+  INT13                 0000fffa   00000002  00000002  00000000  RWIX
+  INT14                 0000fffc   00000002  00000002  00000000  RWIX
+  RESET                 0000fffe   00000002  00000002  00000000  RWIX
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.bss       0    00000200    0000003c     UNINITIALIZED
+                  00000200    0000001a     (.common:gFrameScheduler)
+                  0000021a    00000012     (.common:gPhyDevice)
+                  0000022c    0000000e     (.common:gA110Lr09PhyInfo)
+                  0000023a    00000002     (.common:gPhyAddressInfo)
+
+.data      0    0000023c    00000019     UNINITIALIZED
+                  0000023c    00000010     HalfDuplexTransfer.obj (.data)
+                  0000024c    00000006     A110x2500PhyBridge.obj (.data:gA1101Gdo)
+                  00000252    00000002     A110x2500PhyBridge.obj (.data)
+                  00000254    00000001     Frame.obj (.data)
+
+.TI.persistent 
+*          0    0000023c    00000000     UNINITIALIZED
+
+.stack     0    000003b0    00000050     UNINITIALIZED
+                  000003b0    00000002     rts430_eabi.lib : boot.obj (.stack)
+                  000003b2    0000004e     --HOLE--
+
+.text      0    0000c000    00000ebc     
+                  0000c000    000000a8     A110LR09.obj (.text:A110LR09SetPaTable)
+                  0000c0a8    00000096     A110LR09.obj (.text:A110LR09SetChannr)
+                  0000c13e    00000094     A110x2500PhyBridge.obj (.text:PhySyncEopIsr)
+                  0000c1d2    00000088     Frame.obj (.text:FrameGatewayValidate)
+                  0000c25a    00000084     Frame.obj (.text:FrameBuild)
+                  0000c2de    00000078     BPEXP430G2x53.obj (.text:A110x2500SpiRead)
+                  0000c356    00000078     Frame.obj (.text:FrameAssemble)
+                  0000c3ce    00000064     A110LR09.obj (.text:A110LR09Configure)
+                  0000c432    00000064     rts430_eabi.lib : copy_decompress_rle.obj (.text:__TI_decompress_rle_core)
+                  0000c496    00000062     CC1101.obj (.text:CC1101Wakeup)
+                  0000c4f8    00000060     CC1101.obj (.text:CC1101GetChip)
+                  0000c558    0000005c     A110x2500PhyBridge.obj (.text:PhyInit)
+                  0000c5b4    0000005a     BPEXP430G2x53.obj (.text:A110x2500SpiWrite)
+                  0000c60e    00000058     A110x2500PhyBridge.obj (.text:PhyGetDataStream)
+                  0000c666    00000058     rts430_eabi.lib : autoinit.obj (.text:_auto_init)
+                  0000c6be    00000056     A110LR09.obj (.text:A110LR09Init)
+                  0000c714    00000050     Frame.obj (.text:FrameSchedulerData)
+                  0000c764    00000050     A110x2500PhyBridge.obj (.text:PhyTransmit)
+                  0000c7b4    0000004e     CC1101.obj (.text:CC1101GdoInit)
+                  0000c802    0000004e     CC1101.obj (.text:CC1101GetRegisterWithSpiSyncProblem)
+                  0000c850    0000004c     CC1101.obj (.text:CC1101ReadRxFifo)
+                  0000c89c    00000048     API.obj (.text:ProtocolInit)
+                  0000c8e4    00000044     Frame.obj (.text:FrameDisassemble)
+                  0000c928    00000044     A110x2500PhyBridge.obj (.text:PhyActiveMode)
+                  0000c96c    00000042     BPEXP430G2x53.obj (.text:A110x2500SpiInit)
+                  0000c9ae    00000042     A110x2500PhyBridge.obj (.text:PhyEnableAddressFilter)
+                  0000c9f0    0000003c     Frame.obj (.text:FrameSend)
+                  0000ca2c    0000003a     CC1101.obj (.text:CC1101SetAndVerifyState)
+                  0000ca66    00000034     CC1101.obj (.text:CC1101Read)
+                  0000ca9a    00000034     Frame.obj (.text:FrameSchedulerLinkRequest)
+                  0000cace    00000034     A110x2500PhyBridge.obj (.text:PhyReceiverOn)
+                  0000cb02    00000032     A110x2500PhyBridge.obj (.text:PhyDataStreamBuild)
+                  0000cb34    00000032     HalfDuplexTransfer.obj (.text:TransferComplete)
+                  0000cb66    00000030     CC1101.obj (.text:CC1101Configure)
+                  0000cb96    00000030     CC1101.obj (.text:CC1101GetRegister)
+                  0000cbc6    0000002c     HalfDuplexTransfer.obj (.text:PlatformInit)
+                  0000cbf2    0000002c     rts430_eabi.lib : lsl16.obj (.text)
+                  0000cc1e    00000028     PhyAddress.obj (.text:PhyAddressInit)
+                  0000cc46    00000026     HalfDuplexTransfer.obj (.text:GDO0Isr)
+                  0000cc6c    00000020     BPEXP430G2x53.obj (.text:A110x2500Gdo0Init)
+                  0000cc8c    0000001e     CC1101.obj (.text:CC1101Write)
+                  0000ccaa    0000001c     PhyAddress.obj (.text:PhyAddressIsBroadcast)
+                  0000ccc6    0000001a     A110LR09.obj (.text:A110LR09GetLookup)
+                  0000cce0    0000001a     BPEXP430G2x53.obj (.text:A110x2500Gdo0Enable)
+                  0000ccfa    0000001a     Frame.obj (.text:FrameListen)
+                  0000cd14    0000001a     rts430_eabi.lib : boot_special.obj (.text:_c_int00_noargs_noexit)
+                  0000cd2e    00000016     A110x2500PhyBridge.obj (.text:PhySetChannel)
+                  0000cd44    00000014     BPEXP430G2x53.obj (.text:A110x2500Gdo0Event)
+                  0000cd58    00000014     BPEXP430G2x53.obj (.text:A110x2500HwTimerInit)
+                  0000cd6c    00000014     CC1101.obj (.text:CC1101TimeoutEvent)
+                  0000cd80    00000014     rts430_eabi.lib : copy_zero_init.obj (.text:decompress:ZI:__TI_zero_init)
+                  0000cd94    00000012     CC1101.obj (.text:CC1101SetRegister)
+                  0000cda6    00000012     CC1101.obj (.text:CC1101Strobe)
+                  0000cdb8    00000012     A110x2500PhyBridge.obj (.text:PhyDisable)
+                  0000cdca    00000012     A110x2500PhyBridge.obj (.text:PhyEnable)
+                  0000cddc    00000012     rts430_eabi.lib : copy_decompress_none.obj (.text:decompress:none:__TI_decompress_none)
+                  0000cdee    00000012                     : memcpy.obj (.text:memcpy)
+                  0000ce00    00000010     A110LR09.obj (.text:A110LR09ConvertRssiToDbm)
+                  0000ce10    00000010     rts430_eabi.lib : epilog.obj (.text)
+                  0000ce20    0000000e     BPEXP430G2x53.obj (.text:A110x2500Gdo0GetState)
+                  0000ce2e    0000000e     CC1101.obj (.text:CC1101SpiInit)
+                  0000ce3c    0000000e     CC1101.obj (.text:CC1101WriteTxFifo)
+                  0000ce4a    0000000e     Frame.obj (.text:FrameInit)
+                  0000ce58    0000000e     A110x2500PhyBridge.obj (.text:PhyTimerInit)
+                  0000ce66    0000000a     Frame.obj (.text:FrameIdle)
+                  0000ce70    0000000a     Frame.obj (.text:FrameSetDataResponse)
+                  0000ce7a    0000000a     HalfDuplexTransfer.obj (.text:main)
+                  0000ce84    00000008     BPEXP430G2x53.obj (.text:A110x2500Gdo0WaitForAssert)
+                  0000ce8c    00000008     BPEXP430G2x53.obj (.text:A110x2500Gdo0WaitForDeassert)
+                  0000ce94    00000006     PhyAddress.obj (.text:PhyAddressGetLocalInfo)
+                  0000ce9a    00000006     A110x2500PhyBridge.obj (.text:PhyGetDataStreamStatus)
+                  0000cea0    00000006     rts430_eabi.lib : isr_trap.obj (.text:_isr:__TI_ISR_TRAP)
+                  0000cea6    00000006                     : copy_decompress_rle.obj (.text:decompress:rle24:__TI_decompress_rle24)
+                  0000ceac    00000004     A110LR09.obj (.text:A110LR09GetPowerLookupSize)
+                  0000ceb0    00000004     HalfDuplexTransfer.obj (.text:LinkRequest)
+                  0000ceb4    00000004     rts430_eabi.lib : pre_init.obj (.text:_system_pre_init)
+                  0000ceb8    00000004                     : exit.obj (.text:abort)
+
+.const     0    0000cebc    0000005c     
+                  0000cebc    0000003e     A110LR09.obj (.const:gA110LR09Lookup)
+                  0000cefa    00000012     A110x2500PhyBridge.obj (.const)
+                  0000cf0c    00000008     HalfDuplexTransfer.obj (.const)
+                  0000cf14    00000004     A110LR09.obj (.const:gA110LR09PowerLookup)
+
+.cinit     0    0000cf18    0000002a     
+                  0000cf18    00000018     (.cinit..data.load) [load image, compression = rle]
+                  0000cf30    00000006     (__TI_handler_table)
+                  0000cf36    00000004     (.cinit..bss.load) [load image, compression = zero_init]
+                  0000cf3a    00000008     (__TI_cinit_table)
+
+.init_array 
+*          0    0000c000    00000000     UNINITIALIZED
+
+TRAPINT    0    0000ffe0    00000002     
+                  0000ffe0    00000002     rts430_eabi.lib : int00.obj (.int00)
+
+PORT1      0    0000ffe4    00000002     
+                  0000ffe4    00000002     rts430_eabi.lib : int02.obj (.int02)
+
+PORT2      0    0000ffe6    00000002     
+                  0000ffe6    00000002     HalfDuplexTransfer.obj (.int03)
+
+ADC10      0    0000ffea    00000002     
+                  0000ffea    00000002     rts430_eabi.lib : int05.obj (.int05)
+
+USCIAB0TX 
+*          0    0000ffec    00000002     
+                  0000ffec    00000002     rts430_eabi.lib : int06.obj (.int06)
+
+USCIAB0RX 
+*          0    0000ffee    00000002     
+                  0000ffee    00000002     rts430_eabi.lib : int07.obj (.int07)
+
+TIMER0_A1 
+*          0    0000fff0    00000002     
+                  0000fff0    00000002     rts430_eabi.lib : int08.obj (.int08)
+
+TIMER0_A0 
+*          0    0000fff2    00000002     
+                  0000fff2    00000002     rts430_eabi.lib : int09.obj (.int09)
+
+WDT        0    0000fff4    00000002     
+                  0000fff4    00000002     rts430_eabi.lib : int10.obj (.int10)
+
+COMPARATORA 
+*          0    0000fff6    00000002     
+                  0000fff6    00000002     rts430_eabi.lib : int11.obj (.int11)
+
+TIMER1_A1 
+*          0    0000fff8    00000002     
+                  0000fff8    00000002     rts430_eabi.lib : int12.obj (.int12)
+
+TIMER1_A0 
+*          0    0000fffa    00000002     
+                  0000fffa    00000002     rts430_eabi.lib : int13.obj (.int13)
+
+NMI        0    0000fffc    00000002     
+                  0000fffc    00000002     rts430_eabi.lib : int14.obj (.int14)
+
+.reset     0    0000fffe    00000002     
+                  0000fffe    00000002     rts430_eabi.lib : boot.obj (.reset)
+
+
+LINKER GENERATED COPY TABLES
+
+__TI_cinit_table @ 0000cf3a records: 2, size/record: 4, table size: 8
+	.data: load addr=0000cf18, load size=00000018 bytes, run addr=0000023c, run size=00000019 bytes, compression=rle
+	.bss: load addr=0000cf36, load size=00000004 bytes, run addr=00000200, run size=0000003c bytes, compression=zero_init
+
+
+LINKER GENERATED HANDLER TABLE
+
+__TI_handler_table @ 0000cf30 records: 3, size/record: 2, table size: 6
+	index: 0, handler: __TI_zero_init
+	index: 1, handler: __TI_decompress_rle24
+	index: 2, handler: __TI_decompress_none
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address   name                               
+-------   ----                               
+0000c3ce  A110LR09Configure                  
+0000ce00  A110LR09ConvertRssiToDbm           
+0000ccc6  A110LR09GetLookup                  
+0000ceac  A110LR09GetPowerLookupSize         
+0000c6be  A110LR09Init                       
+0000c0a8  A110LR09SetChannr                  
+0000c000  A110LR09SetPaTable                 
+0000cce0  A110x2500Gdo0Enable                
+0000cd44  A110x2500Gdo0Event                 
+0000ce20  A110x2500Gdo0GetState              
+0000cc6c  A110x2500Gdo0Init                  
+0000ce84  A110x2500Gdo0WaitForAssert         
+0000ce8c  A110x2500Gdo0WaitForDeassert       
+0000cd58  A110x2500HwTimerInit               
+0000c96c  A110x2500SpiInit                   
+0000c2de  A110x2500SpiRead                   
+0000c5b4  A110x2500SpiWrite                  
+0000004a  ADC10AE0                           
+000001b0  ADC10CTL0                          
+000001b2  ADC10CTL1                          
+00000048  ADC10DTC0                          
+00000049  ADC10DTC1                          
+000001b4  ADC10MEM                           
+000001bc  ADC10SA                            
+00000057  BCSCTL1                            
+00000058  BCSCTL2                            
+00000053  BCSCTL3                            
+0000ceb8  C$$EXIT                            
+00000059  CACTL1                             
+0000005a  CACTL2                             
+000010fb  CALBC1_12MHZ                       
+000010f9  CALBC1_16MHZ                       
+000010ff  CALBC1_1MHZ                        
+000010fd  CALBC1_8MHZ                        
+000010fa  CALDCO_12MHZ                       
+000010f8  CALDCO_16MHZ                       
+000010fe  CALDCO_1MHZ                        
+000010fc  CALDCO_8MHZ                        
+0000005b  CAPD                               
+0000cb66  CC1101Configure                    
+0000c7b4  CC1101GdoInit                      
+0000c4f8  CC1101GetChip                      
+0000cb96  CC1101GetRegister                  
+0000c802  CC1101GetRegisterWithSpiSyncProblem
+0000ca66  CC1101Read                         
+0000c850  CC1101ReadRxFifo                   
+0000ca2c  CC1101SetAndVerifyState            
+0000cd94  CC1101SetRegister                  
+0000ce2e  CC1101SpiInit                      
+0000cda6  CC1101Strobe                       
+0000cd6c  CC1101TimeoutEvent                 
+0000c496  CC1101Wakeup                       
+0000cc8c  CC1101Write                        
+0000cc8c  CC1101WriteRegisters               
+0000ce3c  CC1101WriteTxFifo                  
+00000056  DCOCTL                             
+00000128  FCTL1                              
+0000012a  FCTL2                              
+0000012c  FCTL3                              
+0000c356  FrameAssemble                      
+0000c25a  FrameBuild                         
+0000c8e4  FrameDisassemble                   
+0000c1d2  FrameGatewayValidate               
+0000ce66  FrameIdle                          
+0000ce4a  FrameInit                          
+0000ccfa  FrameListen                        
+0000c714  FrameSchedulerData                 
+0000ca9a  FrameSchedulerLinkRequest          
+0000c9f0  FrameSend                          
+0000ce70  FrameSetDataResponse               
+0000cc46  GDO0Isr                            
+00000000  IE1                                
+00000001  IE2                                
+00000002  IFG1                               
+00000003  IFG2                               
+0000ceb0  LinkRequest                        
+00000022  P1DIR                              
+00000025  P1IE                               
+00000024  P1IES                              
+00000023  P1IFG                              
+00000020  P1IN                               
+00000021  P1OUT                              
+00000027  P1REN                              
+00000026  P1SEL                              
+00000041  P1SEL2                             
+0000002a  P2DIR                              
+0000002d  P2IE                               
+0000002c  P2IES                              
+0000002b  P2IFG                              
+00000028  P2IN                               
+00000029  P2OUT                              
+0000002f  P2REN                              
+0000002e  P2SEL                              
+00000042  P2SEL2                             
+0000001a  P3DIR                              
+00000018  P3IN                               
+00000019  P3OUT                              
+00000010  P3REN                              
+0000001b  P3SEL                              
+00000043  P3SEL2                             
+0000c928  PhyActiveMode                      
+0000ce94  PhyAddressGetLocalInfo             
+0000cc1e  PhyAddressInit                     
+0000ccaa  PhyAddressIsBroadcast              
+0000cb02  PhyDataStreamBuild                 
+0000cdb8  PhyDisable                         
+0000cdca  PhyEnable                          
+0000c9ae  PhyEnableAddressFilter             
+0000c60e  PhyGetDataStream                   
+0000ce9a  PhyGetDataStreamStatus             
+0000c558  PhyInit                            
+0000cace  PhyReceiverOn                      
+0000cd2e  PhySetChannel                      
+0000c13e  PhySyncEopIsr                      
+0000ce58  PhyTimerInit                       
+0000c764  PhyTransmit                        
+0000cbc6  PlatformInit                       
+0000c13e  ProtocolEngine                     
+0000c89c  ProtocolInit                       
+0000ce70  ProtocolLoadDataResponse           
+00000172  TA0CCR0                            
+00000174  TA0CCR1                            
+00000176  TA0CCR2                            
+00000162  TA0CCTL0                           
+00000164  TA0CCTL1                           
+00000166  TA0CCTL2                           
+00000160  TA0CTL                             
+0000012e  TA0IV                              
+00000170  TA0R                               
+00000192  TA1CCR0                            
+00000194  TA1CCR1                            
+00000196  TA1CCR2                            
+00000182  TA1CCTL0                           
+00000184  TA1CCTL1                           
+00000186  TA1CCTL2                           
+00000180  TA1CTL                             
+0000011e  TA1IV                              
+00000190  TA1R                               
+000010db  TLV_ADC10_1_LEN                    
+000010da  TLV_ADC10_1_TAG                    
+000010c0  TLV_CHECKSUM                       
+000010f7  TLV_DCO_30_LEN                     
+000010f6  TLV_DCO_30_TAG                     
+0000cb34  TransferComplete                   
+0000005d  UCA0ABCTL                          
+00000062  UCA0BR0                            
+00000063  UCA0BR1                            
+00000060  UCA0CTL0                           
+00000061  UCA0CTL1                           
+0000005f  UCA0IRRCTL                         
+0000005e  UCA0IRTCTL                         
+00000064  UCA0MCTL                           
+00000066  UCA0RXBUF                          
+00000065  UCA0STAT                           
+00000067  UCA0TXBUF                          
+0000006a  UCB0BR0                            
+0000006b  UCB0BR1                            
+00000068  UCB0CTL0                           
+00000069  UCB0CTL1                           
+0000006c  UCB0I2CIE                          
+00000118  UCB0I2COA                          
+0000011a  UCB0I2CSA                          
+0000006e  UCB0RXBUF                          
+0000006d  UCB0STAT                           
+0000006f  UCB0TXBUF                          
+00000120  WDTCTL                             
+00000400  __STACK_END                        
+00000050  __STACK_SIZE                       
+0000cf3a  __TI_CINIT_Base                    
+0000cf42  __TI_CINIT_Limit                   
+0000cf30  __TI_Handler_Table_Base            
+0000cf36  __TI_Handler_Table_Limit           
+UNDEFED   __TI_INITARRAY_Base                
+UNDEFED   __TI_INITARRAY_Limit               
+0000cea0  __TI_ISR_TRAP                      
+0000cddc  __TI_decompress_none               
+0000cea6  __TI_decompress_rle24              
+0000ffe0  __TI_int00                         
+0000ffe4  __TI_int02                         
+0000ffe6  __TI_int03                         
+0000ffea  __TI_int05                         
+0000ffec  __TI_int06                         
+0000ffee  __TI_int07                         
+0000fff0  __TI_int08                         
+0000fff2  __TI_int09                         
+0000fff4  __TI_int10                         
+0000fff6  __TI_int11                         
+0000fff8  __TI_int12                         
+0000fffa  __TI_int13                         
+0000fffc  __TI_int14                         
+0000cd80  __TI_zero_init                     
+ffffffff  __binit__                          
+ffffffff  __c_args__                         
+0000ce1c  __mspabi_func_epilog_1             
+0000ce1a  __mspabi_func_epilog_2             
+0000ce18  __mspabi_func_epilog_3             
+0000ce16  __mspabi_func_epilog_4             
+0000ce14  __mspabi_func_epilog_5             
+0000ce12  __mspabi_func_epilog_6             
+0000ce10  __mspabi_func_epilog_7             
+0000cbf2  __mspabi_slli                      
+0000cc1a  __mspabi_slli_1                    
+0000cc08  __mspabi_slli_10                   
+0000cc06  __mspabi_slli_11                   
+0000cc04  __mspabi_slli_12                   
+0000cc02  __mspabi_slli_13                   
+0000cc00  __mspabi_slli_14                   
+0000cbfe  __mspabi_slli_15                   
+0000cc18  __mspabi_slli_2                    
+0000cc16  __mspabi_slli_3                    
+0000cc14  __mspabi_slli_4                    
+0000cc12  __mspabi_slli_5                    
+0000cc10  __mspabi_slli_6                    
+0000cc0e  __mspabi_slli_7                    
+0000cc0c  __mspabi_slli_8                    
+0000cc0a  __mspabi_slli_9                    
+0000c666  _auto_init                         
+0000cd14  _c_int00_noargs_noexit             
+0000fffe  _reset_vector                      
+000003b0  _stack                             
+0000ceb4  _system_pre_init                   
+0000ceb8  abort                              
+ffffffff  binit                              
+0000024c  gA1101Gdo                          
+0000cf00  gA1101Gdo0                         
+0000cefa  gA1101Spi                          
+0000cebc  gA110LR09Lookup                    
+0000cf14  gA110LR09PowerLookup               
+0000ce7a  main                               
+0000cdee  memcpy                             
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address   name                               
+-------   ----                               
+00000000  IE1                                
+00000001  IE2                                
+00000002  IFG1                               
+00000003  IFG2                               
+00000010  P3REN                              
+00000018  P3IN                               
+00000019  P3OUT                              
+0000001a  P3DIR                              
+0000001b  P3SEL                              
+00000020  P1IN                               
+00000021  P1OUT                              
+00000022  P1DIR                              
+00000023  P1IFG                              
+00000024  P1IES                              
+00000025  P1IE                               
+00000026  P1SEL                              
+00000027  P1REN                              
+00000028  P2IN                               
+00000029  P2OUT                              
+0000002a  P2DIR                              
+0000002b  P2IFG                              
+0000002c  P2IES                              
+0000002d  P2IE                               
+0000002e  P2SEL                              
+0000002f  P2REN                              
+00000041  P1SEL2                             
+00000042  P2SEL2                             
+00000043  P3SEL2                             
+00000048  ADC10DTC0                          
+00000049  ADC10DTC1                          
+0000004a  ADC10AE0                           
+00000050  __STACK_SIZE                       
+00000053  BCSCTL3                            
+00000056  DCOCTL                             
+00000057  BCSCTL1                            
+00000058  BCSCTL2                            
+00000059  CACTL1                             
+0000005a  CACTL2                             
+0000005b  CAPD                               
+0000005d  UCA0ABCTL                          
+0000005e  UCA0IRTCTL                         
+0000005f  UCA0IRRCTL                         
+00000060  UCA0CTL0                           
+00000061  UCA0CTL1                           
+00000062  UCA0BR0                            
+00000063  UCA0BR1                            
+00000064  UCA0MCTL                           
+00000065  UCA0STAT                           
+00000066  UCA0RXBUF                          
+00000067  UCA0TXBUF                          
+00000068  UCB0CTL0                           
+00000069  UCB0CTL1                           
+0000006a  UCB0BR0                            
+0000006b  UCB0BR1                            
+0000006c  UCB0I2CIE                          
+0000006d  UCB0STAT                           
+0000006e  UCB0RXBUF                          
+0000006f  UCB0TXBUF                          
+00000118  UCB0I2COA                          
+0000011a  UCB0I2CSA                          
+0000011e  TA1IV                              
+00000120  WDTCTL                             
+00000128  FCTL1                              
+0000012a  FCTL2                              
+0000012c  FCTL3                              
+0000012e  TA0IV                              
+00000160  TA0CTL                             
+00000162  TA0CCTL0                           
+00000164  TA0CCTL1                           
+00000166  TA0CCTL2                           
+00000170  TA0R                               
+00000172  TA0CCR0                            
+00000174  TA0CCR1                            
+00000176  TA0CCR2                            
+00000180  TA1CTL                             
+00000182  TA1CCTL0                           
+00000184  TA1CCTL1                           
+00000186  TA1CCTL2                           
+00000190  TA1R                               
+00000192  TA1CCR0                            
+00000194  TA1CCR1                            
+00000196  TA1CCR2                            
+000001b0  ADC10CTL0                          
+000001b2  ADC10CTL1                          
+000001b4  ADC10MEM                           
+000001bc  ADC10SA                            
+0000024c  gA1101Gdo                          
+000003b0  _stack                             
+00000400  __STACK_END                        
+000010c0  TLV_CHECKSUM                       
+000010da  TLV_ADC10_1_TAG                    
+000010db  TLV_ADC10_1_LEN                    
+000010f6  TLV_DCO_30_TAG                     
+000010f7  TLV_DCO_30_LEN                     
+000010f8  CALDCO_16MHZ                       
+000010f9  CALBC1_16MHZ                       
+000010fa  CALDCO_12MHZ                       
+000010fb  CALBC1_12MHZ                       
+000010fc  CALDCO_8MHZ                        
+000010fd  CALBC1_8MHZ                        
+000010fe  CALDCO_1MHZ                        
+000010ff  CALBC1_1MHZ                        
+0000c000  A110LR09SetPaTable                 
+0000c0a8  A110LR09SetChannr                  
+0000c13e  PhySyncEopIsr                      
+0000c13e  ProtocolEngine                     
+0000c1d2  FrameGatewayValidate               
+0000c25a  FrameBuild                         
+0000c2de  A110x2500SpiRead                   
+0000c356  FrameAssemble                      
+0000c3ce  A110LR09Configure                  
+0000c496  CC1101Wakeup                       
+0000c4f8  CC1101GetChip                      
+0000c558  PhyInit                            
+0000c5b4  A110x2500SpiWrite                  
+0000c60e  PhyGetDataStream                   
+0000c666  _auto_init                         
+0000c6be  A110LR09Init                       
+0000c714  FrameSchedulerData                 
+0000c764  PhyTransmit                        
+0000c7b4  CC1101GdoInit                      
+0000c802  CC1101GetRegisterWithSpiSyncProblem
+0000c850  CC1101ReadRxFifo                   
+0000c89c  ProtocolInit                       
+0000c8e4  FrameDisassemble                   
+0000c928  PhyActiveMode                      
+0000c96c  A110x2500SpiInit                   
+0000c9ae  PhyEnableAddressFilter             
+0000c9f0  FrameSend                          
+0000ca2c  CC1101SetAndVerifyState            
+0000ca66  CC1101Read                         
+0000ca9a  FrameSchedulerLinkRequest          
+0000cace  PhyReceiverOn                      
+0000cb02  PhyDataStreamBuild                 
+0000cb34  TransferComplete                   
+0000cb66  CC1101Configure                    
+0000cb96  CC1101GetRegister                  
+0000cbc6  PlatformInit                       
+0000cbf2  __mspabi_slli                      
+0000cbfe  __mspabi_slli_15                   
+0000cc00  __mspabi_slli_14                   
+0000cc02  __mspabi_slli_13                   
+0000cc04  __mspabi_slli_12                   
+0000cc06  __mspabi_slli_11                   
+0000cc08  __mspabi_slli_10                   
+0000cc0a  __mspabi_slli_9                    
+0000cc0c  __mspabi_slli_8                    
+0000cc0e  __mspabi_slli_7                    
+0000cc10  __mspabi_slli_6                    
+0000cc12  __mspabi_slli_5                    
+0000cc14  __mspabi_slli_4                    
+0000cc16  __mspabi_slli_3                    
+0000cc18  __mspabi_slli_2                    
+0000cc1a  __mspabi_slli_1                    
+0000cc1e  PhyAddressInit                     
+0000cc46  GDO0Isr                            
+0000cc6c  A110x2500Gdo0Init                  
+0000cc8c  CC1101Write                        
+0000cc8c  CC1101WriteRegisters               
+0000ccaa  PhyAddressIsBroadcast              
+0000ccc6  A110LR09GetLookup                  
+0000cce0  A110x2500Gdo0Enable                
+0000ccfa  FrameListen                        
+0000cd14  _c_int00_noargs_noexit             
+0000cd2e  PhySetChannel                      
+0000cd44  A110x2500Gdo0Event                 
+0000cd58  A110x2500HwTimerInit               
+0000cd6c  CC1101TimeoutEvent                 
+0000cd80  __TI_zero_init                     
+0000cd94  CC1101SetRegister                  
+0000cda6  CC1101Strobe                       
+0000cdb8  PhyDisable                         
+0000cdca  PhyEnable                          
+0000cddc  __TI_decompress_none               
+0000cdee  memcpy                             
+0000ce00  A110LR09ConvertRssiToDbm           
+0000ce10  __mspabi_func_epilog_7             
+0000ce12  __mspabi_func_epilog_6             
+0000ce14  __mspabi_func_epilog_5             
+0000ce16  __mspabi_func_epilog_4             
+0000ce18  __mspabi_func_epilog_3             
+0000ce1a  __mspabi_func_epilog_2             
+0000ce1c  __mspabi_func_epilog_1             
+0000ce20  A110x2500Gdo0GetState              
+0000ce2e  CC1101SpiInit                      
+0000ce3c  CC1101WriteTxFifo                  
+0000ce4a  FrameInit                          
+0000ce58  PhyTimerInit                       
+0000ce66  FrameIdle                          
+0000ce70  FrameSetDataResponse               
+0000ce70  ProtocolLoadDataResponse           
+0000ce7a  main                               
+0000ce84  A110x2500Gdo0WaitForAssert         
+0000ce8c  A110x2500Gdo0WaitForDeassert       
+0000ce94  PhyAddressGetLocalInfo             
+0000ce9a  PhyGetDataStreamStatus             
+0000cea0  __TI_ISR_TRAP                      
+0000cea6  __TI_decompress_rle24              
+0000ceac  A110LR09GetPowerLookupSize         
+0000ceb0  LinkRequest                        
+0000ceb4  _system_pre_init                   
+0000ceb8  C$$EXIT                            
+0000ceb8  abort                              
+0000cebc  gA110LR09Lookup                    
+0000cefa  gA1101Spi                          
+0000cf00  gA1101Gdo0                         
+0000cf14  gA110LR09PowerLookup               
+0000cf30  __TI_Handler_Table_Base            
+0000cf36  __TI_Handler_Table_Limit           
+0000cf3a  __TI_CINIT_Base                    
+0000cf42  __TI_CINIT_Limit                   
+0000ffe0  __TI_int00                         
+0000ffe4  __TI_int02                         
+0000ffe6  __TI_int03                         
+0000ffea  __TI_int05                         
+0000ffec  __TI_int06                         
+0000ffee  __TI_int07                         
+0000fff0  __TI_int08                         
+0000fff2  __TI_int09                         
+0000fff4  __TI_int10                         
+0000fff6  __TI_int11                         
+0000fff8  __TI_int12                         
+0000fffa  __TI_int13                         
+0000fffc  __TI_int14                         
+0000fffe  _reset_vector                      
+ffffffff  __binit__                          
+ffffffff  __c_args__                         
+ffffffff  binit                              
+UNDEFED   __TI_INITARRAY_Base                
+UNDEFED   __TI_INITARRAY_Limit               
+
+[230 symbols]
